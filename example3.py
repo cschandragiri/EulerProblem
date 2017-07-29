@@ -5,6 +5,7 @@
 import time
 
 start = time.time()
-print(sum(int(n.strip()) for n in tuple(open('test3.txt', 'r'))))
+with open('test3.txt') as file:
+    print(sum(int(n.strip()) for n in tuple(file)))
 elapsed = time.time() - start
 print("Time: {:.5f} seconds".format(elapsed))
